@@ -7,12 +7,25 @@ const Navbar = () => {
     return (
         <div className='nav-container'>
             <div className='logo-container'>
-                <Avatar src={icon} size="large" />
+                <Avatar src={icon} size="medium" />
                 <Typography.Title level={2} className='logo'>
                     <Link to="/">Cryptoverse</Link>
                 </Typography.Title>
-                <Button className=''></Button>
             </div>
+            <Menu theme="dark">
+                <Menu.Item icon={<HomeOutlined />}>
+                    <Link to="/">Home</Link>
+                </Menu.Item>
+                <Menu.Item icon={<FundOutlined />}>
+                    <Link to="/crypto">Cryptocurrencies</Link>
+                </Menu.Item>
+                <Menu.Item icon={<HomeOutlined />}>
+                    <Link to="/exchanges">Exchanges</Link>
+                </Menu.Item>
+                <Menu.Item icon={<HomeOutlined />}>
+                    <Link to="/news">News</Link>
+                </Menu.Item>
+            </Menu>
         </div>
     )
 }
